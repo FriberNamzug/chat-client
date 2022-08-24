@@ -13,6 +13,7 @@ import Dashboard from "./pages/Dashboard";
 import Chat from "./pages/Chat";
 
 import { PrivateRoute, PublicRoute } from "./components/PrivateRoutes";
+import Mensaje from "./pages/Mensaje";
 
 axios.defaults.baseURL = import.meta.env.VITE_RUTA_API;
 
@@ -31,6 +32,7 @@ function App() {
             <Route index element={<Dashboard />} />
             <Route path="*" element={<NotFound />} />
             <Route path="chat" element={<Chat />} />
+            <Route path="mensaje/:idChat" element={<Mensaje />} />
           </Route>
         </Route>
 
